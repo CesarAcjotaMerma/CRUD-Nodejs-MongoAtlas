@@ -5,7 +5,6 @@ const cors = require('cors')
 const methodOverride = require('method-override');
 const {dbConnection} = require('../database');
 
-
 class Server {
     constructor(){
         this.app = express();
@@ -49,7 +48,6 @@ middlewares(){
     // Directorio Público
     this.app.use( express.static('public') );
 }
-//execution(){}
 
 //routes
 routes() {
@@ -62,19 +60,6 @@ listen(){
         console.log('Servidor corriendo en puerto', this.port );
     });
 }
-/*
-app.use(require('./routes/documentos.route'));
-app.use(require('./routes/tipodocumentos.route'));
-app.use(require('./routes/entidades.route'));
-app.use(require('./routes/series.route'));
-app.use(require('./routes/detalles.route'));*/
 
-
-/*execution(){
-    this.app.get('/',(req,res) =>{
-        res.render('tipodocumentos/lista_tipodocumentos')
-    });
-    
-    }*/
 }
 module.exports = Server;
