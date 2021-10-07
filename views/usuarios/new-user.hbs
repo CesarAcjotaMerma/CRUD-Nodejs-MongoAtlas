@@ -1,0 +1,50 @@
+<div class="col-md-4 mx-auto">
+    <div class="card text-center">
+        <div class="card-header">
+            <h3>New User</h3>
+        </div>
+        <div class="card-body">
+            <form action="/usuario/create" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nombre" class="form-control" placeholder="Nombre" autofocus required />
+                </div>
+                <div class="form-group">
+                    <input type="email" name="correo" class="form-control" placeholder="Correo Electronico" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" name="password" class="form-control" placeholder="Contraseña" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" name="img" class="form-control" placeholder="imagen" required />
+                </div>
+                <div class="form-group">
+                    <select class="browser-default custom-select" name="rol">
+                        <option selected>Tipo de Usuario</option>
+                        <option value="ADMIN_ROLE">Admin</option>
+                        <option value="USER_ROLE">User</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="estado" id="inlineRadio1" value=true>
+                        <label class="form-check-label" for="inlineRadio1">Activo</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="estado" id="inlineRadio2" value=false>
+                        <label class="form-check-label" for="inlineRadio2">Inactivo</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Save
+                    </button>
+                </div>
+                <div class="form-group">
+                    <a href="/" class="btn btn-danger btn-block">
+                        Volver
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
