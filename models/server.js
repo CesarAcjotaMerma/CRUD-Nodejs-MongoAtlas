@@ -3,7 +3,7 @@ const exphbs = require('express-handlebars')
 const path =  require('path')
 const cors = require('cors')
 const methodOverride = require('method-override');
-const {dbConnection} = require('../database');
+const {dbConnection} = require('../database/config');
 
 class Server {
     constructor(){

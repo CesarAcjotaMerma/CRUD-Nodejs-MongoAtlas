@@ -13,6 +13,7 @@ indexUsuario.usuariosGet = async(req = request, res = response) => {
 indexUsuario.usuariosPost = async(req, res = response) => {
     res.render('usuarios/index');
 }
+
 indexUsuario.usuariosCreate = async(req, res) => {
     
     const { nombre, correo, password, rol,img } = req.body;
@@ -27,6 +28,7 @@ indexUsuario.usuariosCreate = async(req, res) => {
     res.redirect('/');
     
 }
+
 indexUsuario.editUsuario = async (req,res) =>{
     const usuario= await Usuario.findById(req.params.id).lean();
     console.log(usuario.password)

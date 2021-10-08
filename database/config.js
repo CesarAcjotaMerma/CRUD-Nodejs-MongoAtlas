@@ -1,16 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-//const url = `mongodb+srv://admin:1admin9@proyectos.v6tev.mongodb.net/lab07`;
+const MONGODB_URI = 'mongodb+srv://admin:1admin9@proyectos.v6tev.mongodb.net/lab07'
 
-const dbConnection = async() => {
-
+const dbConnection = async() =>{
     try {
 
-        await mongoose.connect( process.env.MONGODB_CNN, {
+        await mongoose.connect( MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useCreateIndex: true,
-            useFindAndModify: false
         });
     
         console.log('Base de datos conected successfull');
@@ -20,10 +17,7 @@ const dbConnection = async() => {
         throw new Error('Error a la hora de iniciar la base de datos');
     }
 
-
 }
-
-
 
 module.exports = {
     dbConnection
