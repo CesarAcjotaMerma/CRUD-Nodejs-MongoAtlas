@@ -1,0 +1,67 @@
+{{!-- <a href="/categorias/add" class="btn btn-success btn-block">Create Category One!</a>
+<br></br>
+<div class="row">
+  
+  {{#each categorias}}
+  
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          {{ title }} <a href="/categorias/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+        </h4>
+        <p><b>Nombre de Categoria:</b>{{ nombre }} </p>
+        <p><b>Usuario:</b> {{categoria_usuario.nombre}}</p>
+        
+        
+        <!-- DELETE REQUEST -->
+        <form action="/categorias/delete/{{_id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger btn-block btn-sm">Eliminar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  {{/each}}
+</div> --}}
+
+</div>
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <a href="/categorias/add" class="btn btn-success btn-block">Crear Categoria Nueva</a>
+            <br></br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <table class="table table-bordered">
+                <thead class="table table-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Usuario</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each categorias }}
+                        <tr>
+                        <td><strong>{{ nombre }}</strong></td>
+                        <td>{{ categoria_usuario.nombre }}</td>
+                        <td>
+                            <a style="margin-bottom:5px;" href="/categorias/edit/{{_id}}" class="btn btn-dark btn-sm btn-rounded">
+                                <i class="fas fa-pen"></i>
+                            </a>
+                            <form action="/categorias/delete/{{_id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger btn-sm btn-rounded">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            </form>
+                        </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+</div>

@@ -11,7 +11,7 @@ indexUsuario.usuariosGet = async(req = request, res = response) => {
 }
 
 indexUsuario.usuariosPost = async(req, res = response) => {
-    res.render('usuarios/index');
+    res.render('usuarios/nuevoUsuario');
 }
 
 indexUsuario.usuariosCreate = async(req, res) => {

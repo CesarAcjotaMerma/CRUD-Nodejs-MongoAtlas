@@ -1,0 +1,31 @@
+<div class="col-md-12 mx-auto">
+  <div class="card">
+    <div class="card-header" style="background: #343a40;">
+        <h4 style="text-align:center;color:#fff">EDITAR CATEGORIA</h4>
+    </div>
+    <div class="card-body">
+      <form action="/categorias/edit/{{categoria._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+            <div class="form-group">
+                <div class="form-group">
+                    <input type="text" name="nombre" class="form-control" value="{{categoria.nombre}}" autofocus required />
+                </div>
+                <div class="form-group">
+                    <input type="text" name="estado" class="form-control" value="{{categoria.estado}}" required />
+                </div>
+                <select class="browser-default custom-select" name="usuario">
+                    {{#each collecctionUsuario}}
+                    <option value={{{_id}}}>{{nombre}}</option>
+                    {{/each}}
+                </select>
+                <br></br>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Save
+                    </button>
+                </div>
+            </div>
+      </form>
+    </div>
+  </div>
+</div>

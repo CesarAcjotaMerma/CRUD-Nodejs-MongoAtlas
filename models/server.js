@@ -20,8 +20,7 @@ class Server {
             partialsDir: path.join(this.app.get('views'),'../views/partials'),
             extname: '.hbs'
         }));
-        
-
+    
         // Conectar a base de datos
         this.conectarDB();
 
@@ -39,6 +38,7 @@ async conectarDB() {
 middlewares(){
     this.app.use(express.urlencoded({extended:false}));
     this.app.use(methodOverride('_method'));
+
     // CORS
     this.app.use( cors() );
 
@@ -52,7 +52,9 @@ middlewares(){
 //routes
 routes() {
     this.app.use( require('../routes/usuarios'));
-    
+    this.app.use( require('../routes/productos'));
+    this.app.use( require('../routes/categorias'));
+    this.app.use( require('../routes/usuarios'));
 }
 
 listen(){

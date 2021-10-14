@@ -1,80 +1,44 @@
 </div>
-      <div class="row">
-          <!--FORM-->
-          <div class="col-md-5">
-              <div class="card">
-                  <div class="card-body">
-                     <form action="/usuario/create" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="nombre" class="form-control" placeholder="Nombre" autofocus required />
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="correo" class="form-control" placeholder="Correo Electronico" required />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="password" class="form-control" placeholder="Contraseña" required />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="img" class="form-control" placeholder="imagen" required />
-                        </div>
-                        <div class="form-group">
-                            <select class="browser-default custom-select" name="rol">
-                                <option selected>Tipo de Usuario</option>
-                                <option value="ADMIN_ROLE">Admin</option>
-                                <option value="USER_ROLE">User</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="browser-default custom-select" name="estado">
-                                <option selected>Seleccionar</option>
-                                <option value=true>Activo</option>
-                                <option value=false>Inactivo</option>
-                            </select>
-                        </div>
-                       
-                        <div class="form-group">
-                            <button class="btn btn-success btn-block" type="submit">
-                                Agregar
+    <div class="row">
+        <div class="col-md-12">
+            <a href="/usuario/add" class="btn btn-success btn-block">Crear Usuario Nuevo</a>
+            <br></br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead class="table table-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Imagen</th>
+                        <th>Rol</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each usuarios}}
+                        <tr>
+                        <td><strong>{{ nombre }}</strong></td>
+                        <td>{{ correo }}</td>
+                        <td>{{ img }}</td>
+                        <td>{{ rol }}</td>
+                        <td style="text-align:center;">
+                            <a style="margin-bottom:5px;" href="/usuario/edit/{{_id}}" class="btn btn-dark btn-sm btn-rounded">
+                                <i class="fas fa-pen"></i>
+                            </a>
+                            <form action="/usuario/delete/{{_id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit"
+                                class="btn btn-danger btn-sm btn-rounded">
+                                <i class="fas fa-trash"></i>
                             </button>
-                        </div>
-                      </form>
-                  </div>
-              </div>
-          </div>
-          <!-- LIST -->
-          <div class="col-md-7">
-              <table class="table table-bordered">
-                  <thead class="table table-dark">
-                      <tr>
-                          <th>Nombre</th>
-                          <th>Correo</th>
-                          <th>Imagen</th>
-                          <th>Rol</th>
-                          <th>Accion</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      {{#each usuarios}}
-                          <tr>
-                            <td><strong>{{ nombre }}</strong></td>
-                            <td>{{ correo }}</td>
-                            <td>{{ img }}</td>
-                            <td>{{ rol }}</td>
-                            <td style="text-align:center;">
-                              <a style="margin:2px;" href="/usuario/edit/{{_id}}" class="btn btn-dark btn-sm btn-rounded">
-                                  <i class="fas fa-pen"></i>
-                              </a>
-                              <form action="/usuario/delete/{{_id}}?_method=DELETE" method="POST">
-                                <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit"
-                                    class="btn btn-danger btn-sm btn-rounded">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                              </form>
-                            </td>
-                          </tr>
-                        {{/each}}
-                  </tbody>
-              </table>
-          </div>
+                            </form>
+                        </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
   </div>

@@ -30,8 +30,13 @@ const UsuarioSchema = Schema({
     google: {
         type: Boolean,
         default: false
-    },
-});
+    }
+},
+    { 
+        timestamps:true,
+        versionKey: false
+    }
+);
 
 
 

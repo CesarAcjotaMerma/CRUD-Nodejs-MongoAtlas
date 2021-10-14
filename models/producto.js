@@ -1,4 +1,3 @@
-
 const { Schema, model } = require('mongoose');
 
 const ProductoSchema = Schema({
@@ -10,23 +9,19 @@ const ProductoSchema = Schema({
         type: Boolean,
         default: true
     },
-    usuario: {
-        type: String,
-        required: true,
-        emun: ['USER1', 'USER_2']
+    usuario: { 
+        type: Schema.Types.ObjectId,
+        ref:'usuario' 
     },
-    //usuario : [{ type: Schema.Types.ObjectId, ref: 'Usuario' }],
     
     precio: {
-        type: Float,
+        type: Number,
         required: [true, 'EL precio es obligatorio'],
     },
-    categoria: {
-        type: String,
-        required: true,
-        emun: ['CAT1', 'CAT_2']
+    categoria: { 
+        type: Schema.Types.ObjectId, 
+        ref:'categoria'
     },
-    //categoria : [{ type: Schema.Types.ObjectId, ref: 'Categoria' }],
     
     descripcion: {
         type: String,
@@ -34,18 +29,11 @@ const ProductoSchema = Schema({
     },
     disponible: {
         type: Boolean,
-        default: false
+        default: true
     },
     img: {
         type: String,
     }
 });
 
-
-ProductoSchema.methods.toJSON = function() {
-    const { __v, descripcion, ...producto  } = this.toObject();
-    return producto;
-}
-
-//exporta el modelo y crea la coleccion dentro de nuestra bd
 module.exports = model( 'Producto', ProductoSchema );

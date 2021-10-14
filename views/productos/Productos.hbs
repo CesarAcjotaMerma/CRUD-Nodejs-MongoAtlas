@@ -1,0 +1,45 @@
+</div>
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <a href="/producto/add" class="btn btn-success btn-block">Crear Producto Nuevo</a>
+            <br></br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <table class="table table-bordered">
+                <thead class="table table-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Descripcion</th>
+                        <th>Usuario</th>
+                        <th>Categoria</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each productos}}
+                        <tr>
+                        <td><strong>{{ nombre }}</strong></td>
+                        <td>{{ precio }}</td>
+                        <td>{{ descripcion }}</td>
+                        <td>{{ producto_usuario.nombre }}</td>
+                        <td>{{ categoria_usuario.nombre }}</td>
+                        <td>
+                            <a style="margin-bottom:5px;" href="/productos/edit/{{_id}}" class="btn btn-dark btn-sm btn-rounded">
+                                <i class="fas fa-pen"></i>
+                            </a>
+                            <form action="/productos/delete/{{_id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger btn-sm btn-rounded">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            </form>
+                        </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+</div>

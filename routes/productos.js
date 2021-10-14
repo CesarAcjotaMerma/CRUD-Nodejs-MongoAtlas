@@ -1,46 +1,30 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
-.
+
 const { validarCampos } = require('../middlewares/validar-campos');
-const { esRoleValido, emailExiste, existeUsuarioPorId } = require('../helpers/db-validators');
+//const { esRoleValido, emailExiste, existeUsuarioPorId } = require('../helpers/db-validators');
+
 
 const router = Router();
 
-const {usuariosGet,
-    usuariosPost,
-    usuariosCreate,
-    editUsuario,
-    usuariosPut,
-    usuariosPatch,
-    usuariosDelete,} = require('../controller/usuarios')
+const {productosGet,
+    productoPost,
+    productoCreate,
+    editproducto,
+    productoPut,
+    productoPatch,
+    productosDelete,} = require('../controller/productos')
 
-router.get('/',usuariosGet);
+router.get('/productos',productosGet);
 
-router.get('/usuario/add', usuariosPost);
 
-router.post('/usuario/create',[
-    check('nombre', 'El nombre es obligatorio').not().isEmpty(),
-    check('password', 'El password debe de ser más de 6 letras').isLength({ min: 6 }),
-    check('correo', 'El correo no es válido').isEmail(),
-    check('correo').custom( emailExiste ),
-    // check('rol', 'No es un rol válido').isIn(['ADMIN_ROLE','USER_ROLE']),
-    check('rol').custom( esRoleValido ),
-    validarCampos
-], usuariosCreate );
+router.get('/producto/add', productoPost);
+router.post('/producto/create',productoCreate );
 
-router.get('/usuario/edit/:id',editUsuario);
-router.put('/usuario/edit/:id',[
-    check('id', 'No es un ID válido').isMongoId(),
-    check('id').custom( existeUsuarioPorId ),
-    check('rol').custom( esRoleValido ), 
-    validarCampos
-],usuariosPut );
+router.get('/productos/edit/:id',editproducto);
+router.put('/productos/edit/:id',productoPut );
 
-router.delete('/usuario/delete/:id',[
-    check('id', 'No es un ID válido').isMongoId(),
-    check('id').custom( existeUsuarioPorId ),
-    validarCampos
-],usuariosDelete );
+router.delete('/productos/delete/:id',productosDelete );
 
-router.patch('/', usuariosPatch );
+//router.patch('/productos', usuariosPatch );
 module.exports = router;
