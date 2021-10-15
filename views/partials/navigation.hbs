@@ -1,28 +1,79 @@
+<!--========== NAV ==========-->
+<div class="nav" id="navbar">
+    <nav class="nav__container">
+        <div>
+            <a href="/" class="nav__link nav__logo">
+                <i class='bx bxs-disc nav__icon' ></i>
+                <span class="nav__logo-name">MongoCRUD</span>
+            </a>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand p-3" href="/">HOME</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-            <a class="nav-link" href="/">Usuarios <span class="sr-only"></span></a>
-            <a class="nav-link" href="/categorias">Categorias<span class="sr-only"></span></a></li>
-            <a class="nav-link" href="/productos">Productos <span class="sr-only"></span></a></li>
-    </div>
-</nav>
-<!-- 
-<div id="sidemenu" class="menu-collapsed">
-    <div id="header">
-        <div id="title"><span>USER</span><div>
-        <div id="menu-btn">
-            <div class="btn-hamburguer"></div>
-            <div class="btn-hamburguer"></div>
-            <div class="btn-hamburguer"></div>
+            <div class="nav__list">
+                <div class="nav__items">
+                    <h3 class="nav__subtitle">Profile</h3>
+
+                    <a href="/" class="nav__link active">
+                        <i class='bx bx-home nav__icon' ></i>
+                        <span class="nav__name">Home</span>
+                    </a>
+                    
+                    <div class="nav__dropdown">
+                        <a href="/" class="nav__link">
+                            <i class='bx bx-user nav__icon' ></i>
+                            <span class="nav__name">Profile</span>
+                            <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                        </a>
+
+                        <div class="nav__dropdown-collapse">
+                            <div class="nav__dropdown-content">
+                                <a href="#" class="nav__dropdown-item">Passwords</a>
+                                <a href="#" class="nav__dropdown-item">Mail</a>
+                                <a href="#" class="nav__dropdown-item">Accounts</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="/categorias" class="nav__link">
+                        <i class='bx bx-message-rounded nav__icon' ></i>
+                        <span class="nav__name">Messages</span>
+                    </a>
+                </div>
+
+                <div class="nav__items">
+                    <h3 class="nav__subtitle">Menu</h3>
+
+                    <div class="nav__dropdown">
+                        <a href="productos" class="nav__link">
+                            <i class='bx bx-bell nav__icon' ></i>
+                            <span class="nav__name">Notifications</span>
+                            <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                        </a>
+
+                        <div class="nav__dropdown-collapse">
+                            <div class="nav__dropdown-content">
+                                <a href="#" class="nav__dropdown-item">Blocked</a>
+                                <a href="#" class="nav__dropdown-item">Silenced</a>
+                                <a href="#" class="nav__dropdown-item">Publish</a>
+                                <a href="#" class="nav__dropdown-item">Program</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-compass nav__icon' ></i>
+                        <span class="nav__name">Explore</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-bookmark nav__icon' ></i>
+                        <span class="nav__name">Saved</span>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div> -->
 
-    <!-- Menu -->
-
+        <a href="#" class="nav__link nav__logout">
+            <i class='bx bx-log-out nav__icon' ></i>
+            <span class="nav__name">Log Out</span>
+        </a>
+    </nav>
 </div>
