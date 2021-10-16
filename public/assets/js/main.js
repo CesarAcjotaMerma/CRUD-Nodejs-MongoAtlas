@@ -1,6 +1,7 @@
 /*==================== SHOW NAVBAR ====================*/
-const showMenu = (headerToggle, navbarId) =>{
+const showMenu = (headerToggle, navbarId, bodyId) =>{
     const toggleBtn = document.getElementById(headerToggle),
+    //bodypadding = document.getElementById(bodyId),
     nav = document.getElementById(navbarId)
     
     // Validate that variables exist
@@ -10,6 +11,7 @@ const showMenu = (headerToggle, navbarId) =>{
             nav.classList.toggle('show-menu')
             // change icon
             toggleBtn.classList.toggle('bx-x')
+            //bodypadding.classList.toggle('body-pd')
         })
     }
 }

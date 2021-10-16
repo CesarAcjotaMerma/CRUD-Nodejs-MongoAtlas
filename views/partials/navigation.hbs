@@ -17,25 +17,53 @@
                     </a>
                     
                     <div class="nav__dropdown">
-                        <a href="/" class="nav__link">
+                        <a class="nav__link">
                             <i class='bx bx-user nav__icon' ></i>
-                            <span class="nav__name">Profile</span>
+                            <span class="nav__name">Usuarios</span>
                             <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                         </a>
 
                         <div class="nav__dropdown-collapse">
                             <div class="nav__dropdown-content">
-                                <a href="#" class="nav__dropdown-item">Passwords</a>
-                                <a href="#" class="nav__dropdown-item">Mail</a>
-                                <a href="#" class="nav__dropdown-item">Accounts</a>
+                                <a href="/" class="nav__dropdown-item">Lista de Usuarios</a>
+                                <a href="/usuario/add" class="nav__dropdown-item">Agregar Usuario</a>
+                                {{!-- <a href="/usuario/add" class="nav__dropdown-item">Accounts</a> --}}
                             </div>
                         </div>
                     </div>
 
-                    <a href="/categorias" class="nav__link">
-                        <i class='bx bx-message-rounded nav__icon' ></i>
-                        <span class="nav__name">Messages</span>
-                    </a>
+                    <div class="nav__dropdown">
+                        <a class="nav__link">
+                            <i class='bx bx-category nav__icon' ></i>
+                            <span class="nav__name">Categorias</span>
+                            <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                        </a>
+
+                        <div class="nav__dropdown-collapse">
+                            <div class="nav__dropdown-content">
+                                <a href="/categorias" class="nav__dropdown-item">Lista de Categorias</a>
+                                <a href="/categorias/add" class="nav__dropdown-item">Agregar Categoria</a>
+                                {{!-- <a href="/usuario/add" class="nav__dropdown-item">Accounts</a> --}}
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="nav__dropdown">
+                        <a class="nav__link">
+                            <i class='bx bxs-t-shirt nav__icon' ></i>
+                            <span class="nav__name">Productos</span>
+                            <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                        </a>
+
+                        <div class="nav__dropdown-collapse">
+                            <div class="nav__dropdown-content">
+                                <a href="/productos" class="nav__dropdown-item">Lista de Productos</a>
+                                <a href="/producto/add" class="nav__dropdown-item">Agregar Producto</a>
+                                {{!-- <a href="/usuario/add" class="nav__dropdown-item">Accounts</a> --}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="nav__items">
