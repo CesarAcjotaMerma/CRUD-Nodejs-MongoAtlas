@@ -27,14 +27,14 @@
 </div> --}}
 
 </div>
-    <div class="row">
-        <div class="col-md-12 mx-auto">
+    <div class="row mt-2">
+        <div class="col-md-6 mx-auto">
             <a href="/categorias/add" class="btn btn-success btn-block">Crear Categoria Nueva</a>
             <br></br>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 mx-auto">
+        <div class="col-md-6 mx-auto">
             <table class="table table-bordered">
                 <thead class="table table-dark">
                     <tr>
@@ -48,13 +48,13 @@
                         <tr>
                         <td><strong>{{ nombre }}</strong></td>
                         <td>{{ categoria_usuario.nombre }}</td>
-                        <td>
-                            <a style="margin-bottom:5px;" href="/categorias/edit/{{_id}}" class="btn btn-dark btn-sm btn-rounded">
+                        <td style="text-align:center;">
+                            <a style="margin-bottom:5px;" href="/categorias/edit/{{_id}}" class="btn btn-dark btn-rounded">
                                 <i class="fas fa-pen"></i>
                             </a>
                             <form action="/categorias/delete/{{_id}}?_method=DELETE" method="POST">
                             <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" class="btn btn-danger btn-sm btn-rounded">
+                            <button type="submit" class="btn btn-danger btn-rounded">
                                 <i class="fas fa-trash"></i>
                             </button>
                             </form>

@@ -1,12 +1,12 @@
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 mx-auto">
         <a href="/usuario/add" class="btn btn-success btn-block">Crear Usuario Nuevo</a>
         <br></br>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-12">
-        <table class="table table-bordered">
+    <div class="col-md-12 mx-auto table-responsive">
+        <table class="table table-bordered table-sm">
             <thead class="table table-dark">
                 <tr>
                     <th>Nombre</th>
@@ -24,15 +24,15 @@
                     <td>{{ img }}</td>
                     <td>{{ rol }}</td>
                     <td style="text-align:center;">
-                        <a style="margin-bottom:10px;" href="/usuario/edit/{{_id}}">
-                            <i class='bx bxs-edit-alt bx-sm bx-border-circle'></i>
+                        <a style="margin-bottom:10px;" href="/usuario/edit/{{_id}}" class="btn btn-dark btn-rounded">
+                            <i class="fas fa-pen"></i>
                         </a>
                         <a>
                             <form action="/usuario/delete/{{_id}}?_method=DELETE" method="POST">
                                 <input type="hidden" name="_method" value="DELETE"/>
                                 <a>
-                                    <button type="submit" style="border:none;backgroud-color:none;">
-                                        <i class='bx bxs-trash-alt bx-sm bx-border-circle'></i>
+                                    <button type="submit" class="btn btn-danger btn-rounded">
+                                        <i class="fas fa-trash"></i>
                                     </button>
                                 </a>
                             </form>

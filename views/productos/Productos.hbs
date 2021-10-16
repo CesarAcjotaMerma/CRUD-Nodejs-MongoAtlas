@@ -26,13 +26,13 @@
                         <td>{{ descripcion }}</td>
                         <td>{{ producto_usuario.nombre }}</td>
                         <td>{{ categoria_usuario.nombre }}</td>
-                        <td>
-                            <a style="margin-bottom:5px;" href="/productos/edit/{{_id}}" class="btn btn-dark btn-sm btn-rounded">
+                        <td style="text-align:center;">
+                            <a style="margin-bottom:5px;" href="/productos/edit/{{_id}}" class="btn btn-dark btn-rounded">
                                 <i class="fas fa-pen"></i>
                             </a>
                             <form action="/productos/delete/{{_id}}?_method=DELETE" method="POST">
                             <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" class="btn btn-danger btn-sm btn-rounded">
+                            <button type="submit" class="btn btn-danger btn-rounded">
                                 <i class="fas fa-trash"></i>
                             </button>
                             </form>
