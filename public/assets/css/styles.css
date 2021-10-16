@@ -110,7 +110,7 @@ img {
 
 .header__search {
   display: flex;
-  padding: 0.6rem 1.2rem;
+  padding: 0.5rem 1rem;
   align-items: center;
   background-color: var(--first-color-light);
   border-radius: .25rem;
@@ -130,15 +130,15 @@ img {
 
 .header__icon, 
 .header__toggle {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   cursor: pointer;
-  padding: 7px;
+  padding: 6px;
 }
 
 .header__icon:hover{
   background-color: var(--first-color);
   border-radius: 50%;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--white-color);
 }
 
