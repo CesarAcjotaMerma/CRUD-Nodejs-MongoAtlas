@@ -1,8 +1,8 @@
-<div class="col-md-12 mx-auto">
+<div class="col-md-8 mx-auto">
     <div class="card text-center">
-        <div class="card-header">
-            <h3>Editar Producto</h3>
-        </div>
+        <div class="card-header" style="background: #343a40;">
+        <h4 style="text-align:center;color:#fff">EDITAR PRODUCTO</h4>
+    </div>
         <div class="card-body">
             <form action="/productos/edit/{{producto._id}}?_method=PUT" method="POST">
                 <div class="form-group">
@@ -37,7 +37,7 @@
                     <input type="text" name="img" class="form-control" placeholder="imagen" required value="{{producto.img}}" />
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary btn-block" type="submit">
+                    <button class="btn btn-success btn-block" type="submit">
                         Actualizar
                     </button>
                 </div>
