@@ -6,12 +6,12 @@
 </div>
 <div class="row">
     <div class="col-md-12 mx-auto table-responsive">
-        <table class="table table-bordered table-sm">
+        <table class="table table-bordered table">
             <thead class="table table-dark">
                 <tr>
                     <th>Nombre</th>
                     <th>Correo</th>
-                    <th>Imagen</th>
+                    {{!-- <th>Imagen</th> --}}
                     <th>Rol</th>
                     <th>Accion</th>
                 </tr>
@@ -21,7 +21,7 @@
                     <tr>
                     <td><strong>{{ nombre }}</strong></td>
                     <td>{{ correo }}</td>
-                    <td>{{ img }}</td>
+                    {{!-- <td>{{ img }}</td> --}}
                     <td>{{ rol }}</td>
                     <td style="text-align:center;">
                         <a style="margin-bottom:10px;" href="/usuario/edit/{{_id}}" class="btn btn-dark btn-rounded">
