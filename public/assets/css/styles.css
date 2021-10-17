@@ -299,14 +299,18 @@ img {
 
 /* ========== MEDIA QUERIES ==========*/
 /* For small devices reduce search*/
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 480px) {
   .header__search {
     width: 30%;
-    display:none;
+    opacity:0 !important;
+  }
+  .header__input {
+    opacity: 0 !important;
   }
   .nav__logo-name, 
   .nav__name, 
-  .nav__subtitle, 
+  .nav__subtitle,
+  .header__toggle, 
   .nav__dropdown-icon {
     color: var(--white-color)!important;
   }
