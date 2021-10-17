@@ -110,9 +110,10 @@ img{
     &__icon,
     &__toggle{
         font-size: 1.2rem;
+        color: var(--white-color);
     }
     &__toggle{
-        color: var(--title-color);
+        color: var(--white-color);
         cursor: pointer;
     }
 }

@@ -53,6 +53,7 @@ middlewares(){
 
 //routes
 routes() {
+    this.app.use( require('../routes/index'));
     this.app.use( require('../routes/usuarios'));
     this.app.use( require('../routes/productos'));
     this.app.use( require('../routes/categorias'));

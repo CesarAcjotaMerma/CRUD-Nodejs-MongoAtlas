@@ -15,7 +15,7 @@ const {usuariosGet,
     usuariosPatch,
     usuariosDelete,} = require('../controller/usuarios')
 
-router.get('/',usuariosGet);
+router.get('/usuarios',usuariosGet);
 
 
 router.get('/usuario/add', usuariosPost);
@@ -44,5 +44,5 @@ router.delete('/usuario/delete/:id',[
     validarCampos
 ],usuariosDelete );
 
-router.patch('/', usuariosPatch );
+//router.patch('/usuarios', usuariosPatch );
 module.exports = router;

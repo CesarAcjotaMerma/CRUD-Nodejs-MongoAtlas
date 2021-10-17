@@ -7,7 +7,7 @@ const Usuario = require('../models/usuario');
 indexUsuario.usuariosGet = async(req = request, res = response) => {
     
     const usuarios = await Usuario.find({}).lean();
-    res.render('usuarios/index',{usuarios});
+    res.render('usuarios/Usuarios',{usuarios});
 }
 
 indexUsuario.usuariosPost = async(req, res = response) => {
@@ -25,7 +25,7 @@ indexUsuario.usuariosCreate = async(req, res) => {
 
     // Guardar en BD
     await usuario.save();
-    res.redirect('/');
+    res.redirect('/usuarios');
     
 }
 
@@ -49,7 +49,7 @@ indexUsuario.usuariosPut = async(req, res = response) => {
 
     const usuario = await Usuario.findByIdAndUpdate( id, resto );
 
-    res.redirect("/")
+    res.redirect("/usuarios")
 }
 
 indexUsuario.usuariosPatch = (req, res = response) => {
@@ -64,7 +64,7 @@ indexUsuario.usuariosDelete = async (req, res) => {
 
     const usuario = await Usuario.findByIdAndDelete( id );
 
-    res.redirect('/');
+    res.redirect('/usuarios');
 }
 
 module.exports = indexUsuario;

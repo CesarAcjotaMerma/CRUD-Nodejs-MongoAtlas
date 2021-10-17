@@ -4,11 +4,12 @@
 /*========== VARIABLES CSS ==========*/
 :root {
   --header-height: 5rem;
-  --nav-width: 219px;
+  --nav-width: 210px;
 
   /*========== Colors ==========*/
   --first-color: #005137;
   --first-color-light: #F4F0FA;
+  --second-color: #58b45c;
   --title-color: #19181B;
   --text-color: #58555E;
   --text-color-light: #A5A1AA;
@@ -114,6 +115,8 @@ img {
   align-items: center;
   background-color: var(--first-color-light);
   border-radius: .25rem;
+  box-shadow: 0 1px 0 rgba(22, 8, 43, 0.8);
+  opacity: 1;
 }
 
 .header__input {
@@ -240,8 +243,7 @@ img {
 
 .nav__dropdown-collapse {
   color: var(--white-color);
-  /* background-color: #F4D03F; */
-  background-color: #2CB300;
+  background-color: var(--second-color);
   border-radius: .25rem;
   margin-top: 1rem;
 }
@@ -297,9 +299,16 @@ img {
 
 /* ========== MEDIA QUERIES ==========*/
 /* For small devices reduce search*/
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   .header__search {
-    width: 70%;
+    width: 30%;
+    display:none;
+  }
+  .nav__logo-name, 
+  .nav__name, 
+  .nav__subtitle, 
+  .nav__dropdown-icon {
+    color: var(--white-color)!important;
   }
 }
 
@@ -314,8 +323,8 @@ img {
     height: calc(var(--header-height) + .5rem);
   }
   .header__search {
-    width: 300px;
-    padding: .55rem .75rem;
+    width: 400px;
+    padding: .45rem .75rem;
   }
   .header__toggle {
     display: none;
@@ -330,7 +339,7 @@ img {
   }
   .nav {
     left: 0;
-    padding: 2rem 1.4rem 0;
+    padding: 1rem 1.5rem 0;
     width: 68px; /* Reduced navbar */
   }
   .nav__items {
