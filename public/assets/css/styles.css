@@ -314,6 +314,14 @@ img {
   .nav__dropdown-icon {
     color: var(--white-color)!important;
   }
+  .header {
+    box-shadow: 0 1px 0 rgba(22, 8, 43, 0.2);
+    padding: 0 1rem;
+    background: var(--first-color) !important;
+  }
+  .header__img {
+    margin-right: -50px;
+  }
 }
 
 @media screen and (min-width: 768px) {
