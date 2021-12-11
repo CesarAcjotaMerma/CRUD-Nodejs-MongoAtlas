@@ -12,7 +12,8 @@ indexHome.indexGet = async(req = request, res = response) => {
     const categorias = await Categoria.find({}).lean();
     const productos = await Producto.find({}).lean();
 
-    res.render('index',{usuarios});
+    res.render('index',{productos});
+    console.log(productos)
 }
 
 module.exports = indexHome;

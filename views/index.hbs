@@ -1,36 +1,274 @@
-<div class="container mx-auto">
-    <div class="row mt-2 mb-5">
-        <div class="col-md-10 mx-auto">
-            <div class="card text-center">
-                <div class="card-header" style="color:#fff;background-color: #003b29; background-image: linear-gradient(90deg, #003b29 50%, #00a00b 100%);">Usuarios</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Usuarios</h5>
-                        <a href="/usuarios" class="btn btn-success">GO</a>
-                    </div>
-                <div class="card-footer text-muted">2 days ago</div>
-            </div>
+        <div class="row">
+          <div class="col-2">
+            <h1>
+              Memories width<br/>
+                Happiness
+            </h1>
+            <p>
+              Detalles especiales para personas especiales
+            </p>
+            <a href="" class="btn">Ver Ofertas &#8594;</a>
+          </div>
+          <div class="col-2">
+            <img src="/assets/images/image1.png" alt="" />
+          </div>
         </div>
+      </div>
     </div>
-    <div class="row">
-        <div class="col-md-6 mx-auto mb-5">
-            <div class="card text-center">
-                <div class="card-header" style="color:#fff;background-color: #003b29; background-image: linear-gradient(90deg, #003b29 50%, #00a00b 100%);">Usuarios</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Categorias</h5>
-                        <a href="/categorias" class="btn btn-success">Go</a>
-                    </div>
-                <div class="card-footer text-muted">5 days ago</div>
-            </div>
+
+
+    <!-- HOLA GENTE -->
+    <!----- Featurd Categories--------->
+    <div class="categories">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <img src="/assets/images/category-1.jpg" alt="" />
+          </div>
+          <div class="col-3">
+            <img src="/assets/images/category-2.jpg" alt="" />
+          </div>
+          <div class="col-3">
+            <img src="/assets/images/category-3.jpg" alt="" />
+          </div>
         </div>
-        <div class="col-md-6 mx-auto">
-            <div class="card text-center">
-                <div class="card-header" style="color:#fff;background-color: #003b29; background-image: linear-gradient(90deg, #003b29 50%, #00a00b 100%);">Usuarios</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Productos</h5>
-                        <a href="/productos" class="btn btn-success">Go</a>
-                    </div>
-                <div class="card-footer text-muted">2 days ago</div>
-            </div>
-        </div>
+      </div>
     </div>
-</div>
+    <!----- Featurd Products--------->
+    <div class="small-container">
+      <h2 class="title">Productos Recientes</h2>
+      <div class="row">
+        {{#each productos }}
+            <div class="col-4">
+            <a href="/productos/{{_id}}">
+                <img src="/assets/images/product-1.jpg" alt=""/></a>
+            <h4>{{ nombre }}</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>${{precio}}</p>
+            </div>
+        {{/each}}
+
+      </div>
+      {{!-- <h2 class="title">Latest Products</h2>
+
+      <div class="row">
+        <div class="col-4">
+          <img src="images/product-5.jpg" alt="" />
+          <h4>Red Printed T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="images/product-6.jpg" alt="" />
+          <h4>Red Printed T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="images/product-7.jpg" alt="" />
+          <h4>Red Printed T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+        <div class="col-4">
+          <img src="images/product-8.jpg" alt="" />
+          <h4>Red Printed T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+      </div> --}}
+
+
+      {{!-- <div class="row">
+        <div class="col-4">
+          <img src="images/product-9.jpg" alt="" />
+          <h4>Red Printed T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="images/product-10.jpg" alt="" />
+          <h4>Red Printed T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="images/product-11.jpg" alt="" />
+          <h4>Red Printed T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+        <div class="col-4">
+          <img src="images/product-12.jpg" alt="" />
+          <h4>Red Printed T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+      </div> --}}
+    </div>
+
+    <!-------- Offer --------->
+    <div class="offer">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-2">
+            <img src="/assets/images/exclusive.png" class="offer-img" alt="" />
+          </div>
+          <div class="col-2">
+            <p>Imaginate</p>
+            <h1>Regalos Exclusivos</h1>
+            <small
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi rerum maiores eveniet minus ut deserunt vitae
+            </small>
+            <a href="" class="btn">Comprar &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------ Testimonial  ------>
+    <div class="testimonial">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, esse
+              quae ex sequi praesentium fuga voluptatem placeat voluptates odio
+              rerum.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <img src="images/user-1.png" alt="" />
+            <h3>Sean Parker</h3>
+          </div>
+
+          <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, esse
+              quae ex sequi praesentium fuga voluptatem placeat voluptates odio
+              rerum.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <img src="images/user-2.png" alt="" />
+            <h3>Michel Joe</h3>
+          </div>
+
+          <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, esse
+              quae ex sequi praesentium fuga voluptatem placeat voluptates odio
+              rerum.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <img src="images/user-3.png" alt="" />
+            <h3>Kaily Jenner</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brands -->
+
+    <div class="brands">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-5">
+            <img src="images/logo-godrej.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="images/logo-oppo.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="images/logo-paypal.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="images/logo-philips.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="images/logo-coca-cola.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>

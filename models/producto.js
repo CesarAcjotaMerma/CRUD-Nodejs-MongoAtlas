@@ -8,21 +8,11 @@ const ProductoSchema = Schema({
     estado: {
         type: Boolean,
         default: true
-    },
-    usuario: { 
-        type: Schema.Types.ObjectId,
-        ref:'usuario' 
-    },
-    
+    },    
     precio: {
         type: Number,
         required: [true, 'EL precio es obligatorio'],
     },
-    categoria: { 
-        type: Schema.Types.ObjectId, 
-        ref:'categoria'
-    },
-    
     descripcion: {
         type: String,
         required: [true, 'La descripcion es obligatorio']

@@ -4,7 +4,6 @@ const { check } = require('express-validator');
 const { validarCampos } = require('../middlewares/validar-campos');
 //const { esRoleValido, emailExiste, existeUsuarioPorId } = require('../helpers/db-validators');
 
-
 const router = Router();
 
 const {productosGet,
@@ -13,9 +12,13 @@ const {productosGet,
     editproducto,
     productoPut,
     productoPatch,
+    detailproductoGet,
+    contactos,
     productosDelete,} = require('../controller/productos')
 
 router.get('/productos',productosGet);
+router.get('/productos/:id',detailproductoGet);
+router.get('/contactos', contactos);
 
 
 router.get('/producto/add', productoPost);

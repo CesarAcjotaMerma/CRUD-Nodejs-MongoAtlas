@@ -1,0 +1,89 @@
+ <!-- Single Products Detail -->
+    <div class="small-container single-product">
+      <div class="row">
+        <div class="col-2">
+          <img src="/assets/images/gallery-1.jpg" width="100%" id="ProductImg" />
+
+          <div class="small-img-row">
+            <div class="small-img-col">
+              <img src="/assets/images/gallery-1.jpg" class="small-img" />
+            </div>
+            <div class="small-img-col">
+              <img src="/assets/images/gallery-2.jpg" class="small-img" />
+            </div>
+            <div class="small-img-col">
+              <img src="/assets/images/gallery-3.jpg" class="small-img" />
+            </div>
+            <div class="small-img-col">
+              <img src="/assets/images/gallery-4.jpg" class="small-img" />
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <p>Home / T-shirt</p>
+          <h2>{{producto.nombre}}</h2>
+          <h4>${{producto.precio}}</h4>
+          <select name="" id="">
+            <option value="">Select Size</option>
+            <option value="">XXL</option>
+            <option value="">XL</option>
+            <option value="">Large</option>
+            <option value="">Medium</option>
+            <option value="">Small</option>
+          </select>
+          <input type="number" value="1" />
+          <a href="" class="btn">Add to Cart</a>
+          <h3>Descripcion<i class="fa fa-indent"></i></h3>
+          <br/>
+          <p>
+            {{producto.descripcion}}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="small-container">
+      <div class="row row-2">
+        <h2>Productos Relacionados</h2>
+        <p>View More</p>
+      </div>
+    </div>
+
+    <!-- Similar Products -->
+
+    {{!-- <div class="row">
+        {{#each productos }}
+        <div class="col-4">
+          <img src="/assets/images/product-3.jpg" alt="" />
+          <h4>{{ nombre }}</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>{{precio}}</p>
+        </div>
+        {{/each}}
+    </div> --}}
+{{!-- 
+    <div class="small-container">
+      <div class="row">
+        {{#each productos }}
+        <div class="col-4">
+          <img src="/assets/images/product-9.jpg" alt="" />
+          <h4>{{nombre}}</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>${{precio}}</p>
+        </div>
+        {{/each}}
+      </div>
+    </div> --}}

@@ -7,7 +7,8 @@ const Usuario = require('../models/usuario');
 indexUsuario.usuariosGet = async(req = request, res = response) => {
     
     const usuarios = await Usuario.find({}).lean();
-    res.render('usuarios/Usuarios',{usuarios});
+    
+    res.render('usuarios/Usuarios',{ usuarios });
 }
 
 indexUsuario.usuariosPost = async(req, res = response) => {

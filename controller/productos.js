@@ -6,48 +6,31 @@ const Producto = require('../models/producto');
 const Categoria = require('../models/categoria');
 const Usuario = require('../models/usuario');
 
+indexProducto.detailproductoGet = async(req = request, res = response) => {
+
+    const producto = await Producto.findById(req.params.id).lean();
+
+    res.render('productos/detalle_producto',{producto})
+}
+
+indexProducto.contactos = async(req = request, res = response) => {
+
+    res.render('contactos/contactos')
+}
+
 indexProducto.productosGet = async(req = request, res = response) => {
 
-    const productos = await Producto.aggregate(
-        
-        [
-            {$match:
-                {
-                    estado:true
-                }
-            },
-            {
-                $lookup:
-                {
-                    from:"usuarios",
-                    localField:"usuario",
-                    foreignField:"_id",
-                    as: "producto_usuario"
-                }
-
-            },
-            { 
-                $unwind: "$producto_usuario"
-            },
-            {
-                $lookup:
-                {
-                    from:"categorias",
-                    localField:"categoria",
-                    foreignField:"_id",
-                    as: "categoria_usuario"
-                }
-
-            },
-            { 
-                $unwind: "$categoria_usuario"
-            },
-        ]
-    );
-    //console.log(categoriasFunc)
-    //console.log(productos); 
-
+    const productos = await Producto.find({}).lean();
+    //console.log(productos)
     res.render('productos/Productos',{productos});
+    res.render('index',{productos});
+
+}
+
+indexProducto.productosGetDetails = async(req, res = response) => {
+    const { id } = req.params;
+    const producto = await Producto.findById( id );
+    res.redirect('/productos');
 }
 
 indexProducto.productoPost = async(req, res = response) => {
@@ -59,9 +42,9 @@ indexProducto.productoPost = async(req, res = response) => {
 
 indexProducto.productoCreate = async(req, res) => {
     
-    const { nombre,estado,usuario,precio,categoria,descripcion,img} = req.body
+    const { nombre,estado,precio,descripcion,img} = req.body
 
-    const producto = new Producto({nombre,estado,usuario,precio,categoria,descripcion,img})
+    const producto = new Producto({nombre,estado,precio,descripcion,img})
     await producto.save();
     res.redirect('/productos')
 }

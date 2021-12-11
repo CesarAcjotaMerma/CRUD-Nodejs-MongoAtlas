@@ -1,45 +1,45 @@
-</div>
-    <div class="row">
-        <div class="col-md-12 mx-auto">
-            <a href="/producto/add" class="btn btn-success btn-block">Crear Producto Nuevo</a>
-            <br></br>
+
+<div class="small-container">
+      <div class="row row-2">
+        <h2>All Products</h2>
+        <select name="" id="">
+          <option value="">Default Sorting</option>
+          <option value="">Sort by Price</option>
+          <option value="">Sort by Popularity</option>
+          <option value="">Sort by Rating</option>
+          <option value="">Sort by sales</option>
+        </select>
+      </div>
+
+      <div class="row">
+        {{#each productos }}
+        <div class="col-4">
+          <img src="/assets/images/product-3.jpg" alt="" />
+          <h4>{{ nombre }}</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>{{precio}}</p>
         </div>
+        {{/each}}
+      </div>
+
+      <div class="page-btn">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>&#8594;</span>
+      </div>
     </div>
-    <div class="row">
-        <div class="col-md-12 mx-auto">
-            <table class="table table-bordered table-responsive">
-                <thead class="table table-dark">
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Descripcion</th>
-                        <th>Usuario</th>
-                        <th>Categoria</th>
-                        <th>Accion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{#each productos}}
-                        <tr>
-                        <td><strong>{{ nombre }}</strong></td>
-                        <td>{{ precio }}</td>
-                        <td>{{ descripcion }}</td>
-                        <td>{{ producto_usuario.nombre }}</td>
-                        <td>{{ categoria_usuario.nombre }}</td>
-                        <td style="text-align:center;">
-                            <a style="margin-bottom:5px;" href="/productos/edit/{{_id}}" class="btn btn-dark btn-rounded">
-                                <i class="fas fa-pen"></i>
-                            </a>
-                            <form action="/productos/delete/{{_id}}?_method=DELETE" method="POST">
-                            <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" class="btn btn-danger btn-rounded">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                            </form>
-                        </td>
-                        </tr>
-                    {{/each}}
-                </tbody>
-            </table>
-        </div>
-</div>
+
+    
+<section class="fashion">
+    <div class="f-overlay"></div>
+    <img src="/assets/img/footer-top-images.jpg" alt="">
+    <h2>FASHION NEW</h2>
+</section>
