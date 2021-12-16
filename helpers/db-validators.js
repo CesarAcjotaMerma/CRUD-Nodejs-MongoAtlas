@@ -1,5 +1,5 @@
-const Role = require('../models/role');
-const Usuario = require('../models/usuario');
+//const Role = require('../models/role');
+//const Usuario = require('../models/usuario');
 
 const esRoleValido = async(rol = '') => {
 
@@ -26,8 +26,6 @@ const existeUsuarioPorId = async( id ) => {
         throw new Error(`El id no existe ${ id }`);
     }
 }
-
-
 
 module.exports = {
     esRoleValido,

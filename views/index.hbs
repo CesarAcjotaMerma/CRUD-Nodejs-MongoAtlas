@@ -1,274 +1,408 @@
-        <div class="row">
-          <div class="col-2">
-            <h1>
-              Memories width<br/>
-                Happiness
-            </h1>
-            <p>
-              Detalles especiales para personas especiales
-            </p>
-            <a href="" class="btn">Ver Ofertas &#8594;</a>
+      <!-- Hero -->
+    <img src="/assets/images/img1.png" alt="" class="hero-img" />
+
+    <div class="hero-content">
+      {{!-- <h2><span class="discount">70% </span> SALE OFF</h2> --}}
+      <h1>
+        <span>Abigail</span>
+        <span> Corporacion</span>
+      </h1>
+      <br>
+      <h4 class="mt-5"><span>Una empresa con un alto proposito</span></h4>
+      <a class="btn" href="/productos">comprar ahora</a>
+    </div>
+  </header>
+
+  <main>
+    {{!-- <section class="advert section">
+      <div class="advert-center container">
+        <div class="advert-box">
+          <div class="dotted">
+            <div class="content">
+              <h2>
+                Girls <br />
+                LEANDRO CACHA DULCE
+              </h2>
+              <h4>Worlds Best Brands</h4>
+            </div>
           </div>
-          <div class="col-2">
-            <img src="/assets/images/image1.png" alt="" />
+          <img src="/assets/images/advert1.png" alt="">
+        </div>
+
+        <div class="advert-box">
+          <div class="dotted">
+            <div class="content">
+              <h2>
+                Summer <br />
+                Clothing
+              </h2>
+              <h4>Worlds Best Brands</h4>
+            </div>
           </div>
+          <img src="/assets/images/advert2.png" alt="">
+        </div>
+
+        <div class="advert-box">
+          <div class="dotted">
+            <div class="content">
+              <h2>
+                Boys <br />
+                Clothing
+              </h2>
+              <h4>Worlds Best Brands</h4>
+            </div>
+          </div>
+          <img src="/assets/images/advert3.png" alt="">
         </div>
       </div>
-    </div>
+    </section> --}}
 
-
-    <!-- HOLA GENTE -->
-    <!----- Featurd Categories--------->
-    <div class="categories">
-      <div class="small-container">
-        <div class="row">
-          <div class="col-3">
-            <img src="/assets/images/category-1.jpg" alt="" />
-          </div>
-          <div class="col-3">
-            <img src="/assets/images/category-2.jpg" alt="" />
-          </div>
-          <div class="col-3">
-            <img src="/assets/images/category-3.jpg" alt="" />
-          </div>
-        </div>
+    <!-- Featured -->
+    <section class="section featured">
+      <div class="title">
+        <h1>Productos Recientes</h1>
       </div>
-    </div>
-    <!----- Featurd Products--------->
-    <div class="small-container">
-      <h2 class="title">Productos Recientes</h2>
-      <div class="row">
-        {{#each productos }}
-            <div class="col-4">
-            <a href="/productos/{{_id}}">
-                <img src="/assets/images/product-1.jpg" alt=""/></a>
-            <h4>{{ nombre }}</h4>
+
+      <div class="product-center container">
+        {{#each producto}}
+        <div class="product">
+          <div class="product-header">
+            <img src="{{img}}" alt="">
+            <ul class="icons">
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <a href="/productos/{{_id}}"><span><i class="bx bx-search"></i></span></a>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="#">
+              <h3>{{nombre}}</h3>
+            </a>
             <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
             </div>
-            <p>${{precio}}</p>
-            </div>
+            <h4 class="price">${{precio}}</h4>
+          </div>
+        </div>
         {{/each}}
-
       </div>
-      {{!-- <h2 class="title">Latest Products</h2>
+    </section>
 
-      <div class="row">
-        <div class="col-4">
-          <img src="images/product-5.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-
-        <div class="col-4">
-          <img src="images/product-6.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-
-        <div class="col-4">
-          <img src="images/product-7.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <img src="images/product-8.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-      </div> --}}
-
-
-      {{!-- <div class="row">
-        <div class="col-4">
-          <img src="images/product-9.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-
-        <div class="col-4">
-          <img src="images/product-10.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-
-        <div class="col-4">
-          <img src="images/product-11.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <img src="images/product-12.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-      </div> --}}
-    </div>
-
-    <!-------- Offer --------->
-    <div class="offer">
-      <div class="small-container">
-        <div class="row">
-          <div class="col-2">
-            <img src="/assets/images/exclusive.png" class="offer-img" alt="" />
-          </div>
-          <div class="col-2">
-            <p>Imaginate</p>
-            <h1>Regalos Exclusivos</h1>
-            <small
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi rerum maiores eveniet minus ut deserunt vitae
-            </small>
-            <a href="" class="btn">Comprar &#8594;</a>
-          </div>
-        </div>
+    <!--Latest -->
+    {{!-- <section class="section featured">
+      <div class="title">
+        <h1>Latest Products</h1>
       </div>
-    </div>
 
-    <!------ Testimonial  ------>
-    <div class="testimonial">
-      <div class="small-container">
-        <div class="row">
-          <div class="col-3">
-            <i class="fa fa-quote-left"></i>
+      <div class="product-center container">
+        <div class="product">
+          <div class="product-header">
+            <img src="/assets/images/pic5.jpg" alt="">
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, esse
-              quae ex sequi praesentium fuga voluptatem placeat voluptates odio
-              rerum.
-            </p>
-            <div class="rating">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-o"></i>
-            </div>
-            <img src="images/user-1.png" alt="" />
-            <h3>Sean Parker</h3>
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
           </div>
-
-          <div class="col-3">
-            <i class="fa fa-quote-left"></i>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, esse
-              quae ex sequi praesentium fuga voluptatem placeat voluptates odio
-              rerum.
-            </p>
+          <div class="product-footer">
+            <a href="#"><h3>Boy’s T-Shirt</h3></a>
             <div class="rating">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-o"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
             </div>
-            <img src="images/user-2.png" alt="" />
-            <h3>Michel Joe</h3>
+            <h4 class="price">$50</h4>
           </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="/assets/images/pic2.jpg" alt="">
 
-          <div class="col-3">
-            <i class="fa fa-quote-left"></i>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, esse
-              quae ex sequi praesentium fuga voluptatem placeat voluptates odio
-              rerum.
-            </p>
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="#"><h3>Boy’s T-Shirt</h3></a>
             <div class="rating">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-o"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
             </div>
-            <img src="images/user-3.png" alt="" />
-            <h3>Kaily Jenner</h3>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="/assets/images/pic1.jpg" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="#"><h3>Boy’s T-Shirt</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="/assets/images/pic4.jpg" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="#"><h3>Boy’s T-Shirt</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="/assets/images/pic1.jpg" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="#"><h3>Boy’s T-Shirt</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="/assets/images/pic3.jpg" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="#"><h3>Boy’s T-Shirt</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="/assets/images/pic2.jpg" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="#"><h3>Boy’s T-Shirt</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="/assets/images/pic5.jpg" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="#"><h3>Boy’s T-Shirt</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
           </div>
         </div>
       </div>
-    </div>
+    </section> --}}
+
+    <!-- Product Banner -->
+    <section class="section">
+      <div class="product-banner">
+        <div class="left">
+          <img src="/assets/images/img2.jpg" alt="" />
+        </div>
+        <div class="right">
+          <div class="content">
+            <h2><span class="discount">90% </span> DESCUENTO</h2>
+            <h1>
+              <span>Por fiestas</span>
+              <span>Navideñas</span>
+            </h1>
+            <a class="btn" href="/productos">comprar ahora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="testimonial-center container">
+        <div class="testimonial">
+          <span>&ldquo;</span>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis,
+            fugiat labore. Veritatis et omnis consequatur.
+          </p>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <div class="img-cover">
+            <img src="/assets/images/profile1.jpg" alt="" />
+          </div>
+          <h4>Mia Khalifa</h4>
+        </div>
+        <div class="testimonial">
+          <span>&ldquo;</span>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis,
+            fugiat labore. Veritatis et omnis consequatur.
+          </p>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <div class="img-cover">
+            <img src="/assets/images/profile2.jpg" alt="" />
+          </div>
+          <h4>El Niño Polla</h4>
+        </div>
+        <div class="testimonial">
+          <span>&ldquo;</span>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis,
+            fugiat labore. Veritatis et omnis consequatur.
+          </p>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <div class="img-cover">
+            <img src="/assets/images/profile3.jpg" alt="" />
+          </div>
+          <h4>Mia Khalifa</h4>
+        </div>
+      </div>
+    </section>
 
     <!-- Brands -->
-
-    <div class="brands">
-      <div class="small-container">
-        <div class="row">
-          <div class="col-5">
-            <img src="images/logo-godrej.png" alt="" />
-          </div>
-          <div class="col-5">
-            <img src="images/logo-oppo.png" alt="" />
-          </div>
-          <div class="col-5">
-            <img src="images/logo-paypal.png" alt="" />
-          </div>
-          <div class="col-5">
-            <img src="images/logo-philips.png" alt="" />
-          </div>
-          <div class="col-5">
-            <img src="images/logo-coca-cola.png" alt="" />
-          </div>
+    <section class="section">
+      <div class="brands-center container">
+        <div class="brand">
+          <img src="/assets/images/brand1.png" alt="" />
+        </div>
+        <div class="brand">
+          <img src="/assets/images/brand2.png" alt="" />
+        </div>
+        <div class="brand">
+          <img src="/assets/images/brand1.png" alt="" />
+        </div>
+        <div class="brand">
+          <img src="/assets/images/brand2.png" alt="" />
+        </div>
+        <div class="brand">
+          <img src="/assets/images/brand1.png" alt="" />
+        </div>
+        <div class="brand">
+          <img src="/assets/images/brand2.png" alt="" />
         </div>
       </div>
-    </div>
+    </section>
+  </main>
+
+
+
+
+{{!-- <!----- Featurd Products--------->
+<div class="small-container">
+  <h2 class="title">Productos Recientes</h2>
+  <div class="row">
+    {{#each productos }}
+        <div class="col-4">
+        <a href="/productos/{{_id}}">
+            <img src="/assets/images/product-1.jpg" alt=""/></a>
+        <h4>{{ nombre }}</h4>
+        <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+        </div>
+        <p>${{precio}}</p>
+        </div>
+    {{/each}}
+
+  </div>
+</div> --}}

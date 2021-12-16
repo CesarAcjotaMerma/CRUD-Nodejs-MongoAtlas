@@ -35,7 +35,9 @@ class Server {
 async conectarDB() {
     await dbConnection();
 }
+
 middlewares(){
+
     this.app.use(express.urlencoded({extended:false}));
     this.app.use(methodOverride('_method'));
 
@@ -54,15 +56,13 @@ middlewares(){
 //routes
 routes() {
     this.app.use( require('../routes/index'));
-    this.app.use( require('../routes/usuarios'));
     this.app.use( require('../routes/productos'));
-    this.app.use( require('../routes/categorias'));
-    this.app.use( require('../routes/usuarios'));
+    this.app.use( require('../routes/cart'));
 }
 
 listen(){
     this.app.listen( this.port, () => {
-        console.log('Servidor corriendo en puerto', this.port );
+        console.log('Servidor corriendo en puerto', this.port);
     });
 }
 

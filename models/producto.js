@@ -24,6 +24,9 @@ const ProductoSchema = Schema({
     img: {
         type: String,
     }
+},
+{ 
+    timestamps: true 
 });
 
 module.exports = model( 'Producto', ProductoSchema );

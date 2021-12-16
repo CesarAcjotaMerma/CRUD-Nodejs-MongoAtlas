@@ -1,45 +1,54 @@
+<!-- All Products -->
+<section class="section all-products" id="products">
+    <div class="top container">
+        <h1>Todo los Productos</h1>
+        <form>
+            <select>
+                <option value="1">Defualt Sorting</option>
+                <option value="2">Sort By Price</option>
+                <option value="3">Sort By Popularity</option>
+                <option value="4">Sort By Sale</option>
+                <option value="5">Sort By Rating</option>
+            </select>
+            <span><i class='bx bx-chevron-down'></i></span>
+        </form>
+    </div>
 
-<div class="small-container">
-      <div class="row row-2">
-        <h2>All Products</h2>
-        <select name="" id="">
-          <option value="">Default Sorting</option>
-          <option value="">Sort by Price</option>
-          <option value="">Sort by Popularity</option>
-          <option value="">Sort by Rating</option>
-          <option value="">Sort by sales</option>
-        </select>
-      </div>
-
-      <div class="row">
-        {{#each productos }}
-        <div class="col-4">
-          <img src="/assets/images/product-3.jpg" alt="" />
-          <h4>{{ nombre }}</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>{{precio}}</p>
+    <div class="product-center container">
+      {{#each productos }}
+        <div class="product">
+            <div class="product-header">
+                <img src="{{img}}" alt="">
+                <ul class="icons">
+                    <a href="/cart"> <span><i class="bx bx-shopping-bag"></i></span>
+                    </a>
+                    <a href="/productos/{{_id}}"><span><i class="bx bx-search"></i></span></a>
+                </ul>
+            </div>
+            <div class="product-footer">
+                <a href="/productos/{{_id}}">
+                    <h3>{{nombre}}</h3>
+                </a>
+                <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                </div>
+                <h4 class="price">${{precio}}</h4>
+            </div>
         </div>
-        {{/each}}
-      </div>
+      {{/each}}
+    </div>
+</section>
 
-      <div class="page-btn">
+<section class="pagination">
+    <div class=" container">
         <span>1</span>
         <span>2</span>
         <span>3</span>
         <span>4</span>
-        <span>&#8594;</span>
-      </div>
+        <span><i class='bx bx-right-arrow-alt'></i></span>
     </div>
-
-    
-<section class="fashion">
-    <div class="f-overlay"></div>
-    <img src="/assets/img/footer-top-images.jpg" alt="">
-    <h2>FASHION NEW</h2>
 </section>

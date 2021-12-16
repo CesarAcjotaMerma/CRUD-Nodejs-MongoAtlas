@@ -3,17 +3,13 @@ const bcryptjs = require('bcryptjs');
 
 const indexHome = {};
 const Producto = require('../models/producto');
-const Categoria = require('../models/categoria');
-const Usuario = require('../models/usuario');
 
 indexHome.indexGet = async(req = request, res = response) => {
     
-    const usuarios = await Usuario.find({}).lean();
-    const categorias = await Categoria.find({}).lean();
-    const productos = await Producto.find({}).lean();
+    const producto = await Producto.find({}).lean().limit(4).sort({'updatedAt': -1});
 
-    res.render('index',{productos});
-    console.log(productos)
+    res.render('index',{producto});
+    //console.log(productos)
 }
 
 module.exports = indexHome;

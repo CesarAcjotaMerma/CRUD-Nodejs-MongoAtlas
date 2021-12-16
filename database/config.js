@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const MONGODB_URI = 'mongodb+srv://admin:1admin9@proyectos.v6tev.mongodb.net/tiendaRegalos'
+const MONGODB_URI = 'mongodb+srv://admin:1admin9@proyectos.v6tev.mongodb.net/abigaildb'
 
 const dbConnection = async() =>{
     try {

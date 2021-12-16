@@ -1,5 +1,5 @@
  <!-- Single Products Detail -->
-    <div class="small-container single-product">
+    {{!-- <div class="small-container single-product">
       <div class="row">
         <div class="col-2">
           <img src="/assets/images/gallery-1.jpg" width="100%" id="ProductImg" />
@@ -48,42 +48,91 @@
         <h2>Productos Relacionados</h2>
         <p>View More</p>
       </div>
+    </div> --}}
+
+
+  <!-- Product Details -->
+  <section class="section product-detail">
+
+    <div class="details container-md">
+      <div class="left">
+        <div class="main">
+          <img src="{{producto.img}}" alt="">
+        </div>
+        <div class="thumbnails">
+          <div class="thumbnail">
+            <img src="{{producto.img}}" alt="">
+          </div>
+          <div class="thumbnail">
+            <img src="{{producto.img}}" alt="">
+          </div>
+          <div class="thumbnail">
+            <img src="{{producto.img}}" alt="">
+          </div>
+          <div class="thumbnail">
+            <img src="{{producto.img}}" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <span>Home/T-shirt</span>
+        <h2>{{producto.nombre}}</h2>
+        <div class="price"><h2>${{producto.precio}}</h2></div>
+        <form>
+          <div>
+            <select>
+              <option value="Select Size" selected disabled>Select Size</option>
+              <option value="1">32</option>
+              <option value="2">42</option>
+              <option value="3">52</option>
+              <option value="4">62</option>
+            </select>
+            <span><i class='bx bx-chevron-down'></i></span>
+          </div>
+        </form>
+
+        <form class="form">
+          <input type="text" placeholder="1">
+          <a href="cart/" class="addCart">Agregar al carrito</a>
+        </form>
+        <h3><b>Detalles del Producto</b></h3>
+        <p>{{producto.descripcion}}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  {{!-- <section class="section featured">
+    <div class="top container">
+      <h1>Related Products</h1>
+      <a href="#" class="view-more">View more</a>
     </div>
 
-    <!-- Similar Products -->
-
-    {{!-- <div class="row">
-        {{#each productos }}
-        <div class="col-4">
-          <img src="/assets/images/product-3.jpg" alt="" />
-          <h4>{{ nombre }}</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>{{precio}}</p>
+    <div class="product-center container">
+      {{#each productosR}}
+      <div class="product">
+        <div class="product-header">
+          <img src="{{img}}" alt="">
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
         </div>
-        {{/each}}
-    </div> --}}
-{{!-- 
-    <div class="small-container">
-      <div class="row">
-        {{#each productos }}
-        <div class="col-4">
-          <img src="/assets/images/product-9.jpg" alt="" />
-          <h4>{{nombre}}</h4>
+        <div class="product-footer">
+          <a href="#"><h3>{{nombre}}</h3></a>
           <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
           </div>
-          <p>${{precio}}</p>
+          <h4 class="price">${{precio}}</h4>
         </div>
-        {{/each}}
       </div>
-    </div> --}}
+      {{/each}}
+    </div>
+  </section> --}}
+
+
